@@ -29,23 +29,24 @@ int main(int argc, char **argv)
     //[5]: Grade for each assignment (Series of Doubles)
 
     //[1]: User ID Number (int)
-    student.id = promptInt("Please enter the student's ID number: ", 0, 999999999);
-    std::cout << student.id << std::endl;
+    student.id = promptInt("Please enter the student's id number: ", 0, 999999999);
+    //std::cout << student.id << std::endl;
 
     //[2]: First Name (String)
-    std::cout << "Please enter the students first name: ";
+    std::cout << "Please enter the student's first name: ";
     student.f_name = new char[128];
     std::cin >> student.f_name;
     //std::cout << student.f_name << std::endl;
 
     //[3]: Last Name (String)
-    std::cout << "Please enter the students last name: ";
+    std::cout << "Please enter the student's last name: ";
     student.l_name = new char[128];
     std::cin >> student.l_name;
     //std::cout << student.l_name << std::endl;
     
     //[4] + [5]: Number of assignments + Grades for each
     student.n_assignments = promptInt("Please enter how many assignments were graded: ", 1, 134217728);
+    std::cout << std::endl;
     //std::cout << student.n_assignments << std::endl;
 
     std::string message;
@@ -59,6 +60,7 @@ int main(int argc, char **argv)
 //----------------------------------------------------------------------//
     // Call `CalculateStudentAverage(???, ???)`
     // Output `average`
+    std::cout << std::endl;
     std::cout << "Student: " << student.f_name << " " << student.l_name << " [" << student.id << "]" << std::endl;
     calculateStudentAverage(&student, &average);
     std::cout << "  " << "Average grade: " << std::fixed << std::setprecision(1) << average << std::endl;
